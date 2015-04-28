@@ -1,0 +1,44 @@
+#masthead {
+	background-image: url("/splash-primary-img.jpg");
+	background-position: center;
+	background-size: auto;
+	height: 1300px;
+
+	.top-links {
+		font-size: 36px;
+		font-family: "open-sans";
+		color: #fff;
+		font-weight: 300;
+	}
+
+	#full-logo {
+		display: block;
+		margin: 250px auto 0 auto;
+	}
+
+	#tagline {
+		font-size: 72px;
+		font-family: "runda";
+		font-weight: 500;
+		color: #fff;
+		display: block;
+		width: 800px;
+		text-align: center;
+		margin: 150px auto 0 auto;
+	}
+
+	#product-blurb {
+		font-size: 48px;
+		font-family: "open-sans";
+		font-weight: 300;
+		color: #fff;
+		width: 900px;
+		text-align: center;
+		margin: 150px auto 0 auto;
+	}
+}
+
+#who-benefits {
+	background-color: #213644;
+	height: 1100px;
+}
