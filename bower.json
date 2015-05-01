@@ -1,6 +1,0 @@
-{
-	"name": "resflow-landing",
-	"dependencies": {
-		"bootstrap-sass": "~3.3.3"
-	}
-}
