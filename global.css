@@ -6291,7 +6291,7 @@ button.close {
     display: none !important; } }
 
 #masthead {
-  background-image: url("/splash-primary-img.jpg");
+  background-image: url("splash-primary-img.jpg");
   background-position: center;
   background-size: auto;
   height: 1300px; }
