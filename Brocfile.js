@@ -1,12 +1,17 @@
-var pickFiles = require('broccoli-static-compiler');
+// var pickFiles = require('broccoli-static-compiler');
+var funnel = require('broccoli-funnel');
 var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
-var injectLivereload = require('broccoli-inject-livereload');
+// var injectLivereload = require('broccoli-inject-livereload');
 
-var styles = pickFiles('styles', { srcDir: '/', destDir: 'assets' });
+var projectFiles = 'public';
 
-var siteCss = compileSass([styles], 'assets/global.scss', 'assets/global.css');
+var styles = funnel(projectFiles, { srcDir: 'styles', destDir: 'styles' });
 
-var publicFiles = injectLivereload('public');
+var images = funnel(projectFiles, { srcDir: 'images', destDir: 'images' });
 
-module.exports = mergeTrees([siteCss, publicFiles]);
+var siteCss = compileSass([styles], 'styles/global.scss', 'styles/global.css');
+
+var pages = funnel(projectFiles, { include: [new RegExp(/.html/)] });
+
+module.exports = mergeTrees([siteCss, images, pages]);
